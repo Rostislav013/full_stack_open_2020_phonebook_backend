@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
+const cors = require("cors");
 
 /*In order to access the data easily, 
 we need the help of the express json-parser, 
@@ -21,6 +22,8 @@ app.use(
     ].join(" ");
   })
 );
+
+app.use(cors());
 
 let persons = [
   {
