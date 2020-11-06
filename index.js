@@ -7,6 +7,7 @@ const cors = require("cors");
 we need the help of the express json-parser, 
 that is taken to use with command app.use(express.json()). */
 app.use(express.json());
+app.use(express.static("build"));
 
 app.use(
   morgan(function (tokens, req, res) {
